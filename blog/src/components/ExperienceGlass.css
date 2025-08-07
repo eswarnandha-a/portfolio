@@ -1,0 +1,828 @@
+/* Experience Glass Section Styles */
+.experience-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: radial-gradient(circle at center, #2d0a1f 0%, #1a0611 50%, #0d0306 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: 600px;
+  scroll-margin-top: 80px;
+}
+
+/* Override global mobile constraints for experience section */
+#experience {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  z-index: 2 !important;
+  scroll-margin-top: 80px !important;
+}
+
+/* Silk Background Container */
+.silk-background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.silk-background-container canvas {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Dark Overlay Container */
+.dark-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1.5;
+  overflow: hidden;
+}
+
+/* Experience Content Container */
+.experience-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 4rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Companies Container */
+.experience-companies {
+  display: flex;
+  gap: 8rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Company Cards */
+.experience-company-card {
+  text-align: center;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+/* Mobile Small (320px) */
+@media (max-width: 320px) {
+  .experience-section {
+    height: auto;
+    min-height: 1200px;
+    margin-bottom: 200px;
+  }
+  
+  /* Ensure Silk background covers full section height */
+  .silk-background-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1 !important;
+  }
+  
+  /* Dark overlay covers full section */
+  .dark-overlay-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1.5 !important;
+  }
+  
+  .experience-content {
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: 1200px;
+    justify-content: flex-start;
+  }
+  
+  .experience-content h2 {
+    font-size: 2rem !important;
+    margin-bottom: 2rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  .experience-companies {
+    flex-direction: column;
+    gap: 2rem !important;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .experience-company-card {
+    max-width: 280px;
+    width: 100%;
+  }
+  
+  .experience-company-card img {
+    width: 140px !important;
+    height: 160px !important;
+  }
+  
+  .experience-company-card h3 {
+    font-size: 1rem !important;
+  }
+  
+  .experience-company-card p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Mobile Medium (375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+  .experience-section {
+    height: auto;
+    min-height: 1200px;
+    margin-bottom: 200px;
+  }
+  
+  /* Ensure Silk background covers full section height */
+  .silk-background-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1 !important;
+  }
+  
+  /* Dark overlay covers full section */
+  .dark-overlay-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1.5 !important;
+  }
+  
+  .experience-content {
+    padding: 3rem 1.5rem;
+    height: auto;
+    min-height: 1200px;
+    justify-content: flex-start;
+  }
+  
+  .experience-content h2 {
+    font-size: 2.2rem !important;
+    margin-bottom: 2.5rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  .experience-companies {
+    flex-direction: column;
+    gap: 2.5rem !important;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .experience-company-card {
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .experience-company-card img {
+    width: 150px !important;
+    height: 170px !important;
+  }
+  
+  .experience-company-card h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .experience-company-card p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Mobile Large (425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+  .experience-section {
+    height: auto;
+    min-height: 1200px;
+    margin-bottom: 200px;
+  }
+  
+  /* Ensure Silk background covers full section height */
+  .silk-background-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1 !important;
+  }
+  
+  /* Dark overlay covers full section */
+  .dark-overlay-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1.5 !important;
+  }
+  
+  .experience-content {
+    padding: 3rem 2rem;
+    height: auto;
+    min-height: 1200px;
+    justify-content: flex-start;
+  }
+  
+  .experience-content h2 {
+    font-size: 2.5rem !important;
+    margin-bottom: 3rem !important;
+    margin-top: 1.5rem !important;
+  }
+  
+  .experience-companies {
+    flex-direction: column;
+    gap: 3rem !important;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .experience-company-card {
+    max-width: 320px;
+    width: 100%;
+  }
+  
+  .experience-company-card img {
+    width: 160px !important;
+    height: 180px !important;
+  }
+  
+  .experience-company-card h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .experience-company-card p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Tablet and Desktop */
+@media (min-width: 426px) and (max-width: 768px) {
+  .experience-content {
+    padding: 4rem 2rem;
+  }
+  
+  .experience-companies {
+    flex-direction: column;
+    gap: 4rem !important;
+    align-items: center;
+  }
+  
+  .experience-company-card {
+    max-width: 400px;
+  }
+}
+
+/* General Mobile Styles - Ensure background covers content */
+@media (max-width: 768px) {
+  .experience-section {
+    min-height: 1200px;
+    height: auto;
+    position: relative;
+    margin-bottom: 200px;
+  }
+  
+  .silk-background-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1 !important;
+  }
+  
+  .dark-overlay-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 1200px !important;
+    z-index: 1.5 !important;
+  }
+  
+  .experience-content {
+    position: relative !important;
+    z-index: 2 !important;
+    min-height: 1200px !important;
+  }
+}
+
+/* Ensure Canvas stretches full width and is centered */
+.silk-background-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.experience-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.experience-canvas-container canvas {
+  pointer-events: auto;
+}
+
+/* Experience Title */
+.experience-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.experience-title h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #8B0000, #FF4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(139, 0, 0, 0.5);
+  letter-spacing: 0.1em;
+}
+
+.experience-title p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Experience Images */
+.experience-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.experience-image-left {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  width: 350px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(139, 0, 0, 0.3),
+    0 0 40px rgba(255, 68, 68, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.experience-image-right {
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+  width: 350px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(139, 0, 0, 0.3),
+    0 0 40px rgba(255, 68, 68, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.experience-image-left:hover,
+.experience-image-right:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 
+    0 30px 80px rgba(139, 0, 0, 0.4),
+    0 0 60px rgba(255, 68, 68, 0.2);
+}
+
+.experience-image-left img,
+.experience-image-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.experience-image-left:hover img,
+.experience-image-right:hover img {
+  transform: scale(1.1);
+}
+
+/* Experience Overlay */
+.experience-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.experience-image-left:hover .experience-overlay,
+.experience-image-right:hover .experience-overlay {
+  transform: translateY(0);
+}
+
+.experience-overlay h3 {
+  color: #FF4444;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 10px rgba(139, 0, 0, 0.5);
+}
+
+.experience-overlay p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.experience-overlay span {
+  color: rgba(255, 68, 68, 0.8);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Glassmorphism effect for images */
+.experience-image-left::before,
+.experience-image-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.experience-image-left:hover::before,
+.experience-image-right:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Override global mobile constraints specifically for experience */
+  #experience {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-section {
+    width: 100vw !important;
+    max-width: none !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 1200px !important;
+  }
+  
+  .silk-background-container,
+  .dark-overlay-container {
+    width: 100% !important;
+    max-width: none !important;
+    left: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    min-height: 1200px !important;
+  }
+  
+  /* Force Canvas to full width on mobile */
+  .silk-background-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+  }
+  
+  /* Experience content mobile styles */
+  .experience-content {
+    padding: 2rem 1rem 1rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: 1200px !important;
+  }
+  
+  .experience-companies {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .experience-company-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-title h2 {
+    font-size: 2.5rem;
+  }
+  
+  .experience-title p {
+    font-size: 1rem;
+  }
+  
+  .experience-image-left {
+    top: 20%;
+    left: 5%;
+    width: 250px;
+    height: 180px;
+  }
+  
+  .experience-image-right {
+    bottom: 20%;
+    right: 5%;
+    width: 250px;
+    height: 180px;
+  }
+  
+  .experience-overlay {
+    padding: 15px;
+  }
+  
+  .experience-overlay h3 {
+    font-size: 1.1rem;
+  }
+  
+  .experience-overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Override global mobile constraints specifically for experience */
+  #experience {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-section {
+    width: 100vw !important;
+    max-width: none !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 1200px !important;
+  }
+  
+  .silk-background-container,
+  .dark-overlay-container {
+    width: 100% !important;
+    max-width: none !important;
+    left: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    min-height: 1200px !important;
+  }
+  
+  /* Force Canvas to full width on small mobile */
+  .silk-background-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+  }
+  
+  /* Experience content mobile styles */
+  .experience-content {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-companies {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-company-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-title h2 {
+    font-size: 2rem;
+  }
+  
+  .experience-image-left,
+  .experience-image-right {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .experience-image-left {
+    top: 25%;
+    left: 3%;
+  }
+  
+  .experience-image-right {
+    bottom: 25%;
+    right: 3%;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  /* Override global mobile constraints specifically for experience */
+  #experience {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-section {
+    width: 100vw !important;
+    max-width: none !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 1200px !important;
+  }
+  
+  .silk-background-container,
+  .dark-overlay-container {
+    width: 100% !important;
+    max-width: none !important;
+    left: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    min-height: 1200px !important;
+  }
+  
+  .silk-background-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+  }
+  
+  /* Experience content mobile styles */
+  .experience-content {
+    padding: 1rem 0.5rem 0.5rem 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-companies {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .experience-company-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 0.25rem !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Glass cursor effect enhancement */
+.experience-section canvas {
+  mix-blend-mode: screen;
+}
+
+/* Subtle animation for the entire section */
+.experience-section {
+  animation: experienceGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes experienceGlow {
+  0% {
+    box-shadow: inset 0 0 50px rgba(139, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: inset 0 0 100px rgba(139, 0, 0, 0.2);
+  }
+}
