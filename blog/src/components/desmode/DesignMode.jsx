@@ -4,6 +4,7 @@ import Home from './Home';
 import UIUX from './UIUX';
 import Gallery from './Gallery';
 import Videos from './Videos';
+import Works from './Works';
 import './DesignMode.css';
 
 const DesignMode = ({ onDevModeClick }) => {
@@ -54,11 +55,10 @@ const DesignMode = ({ onDevModeClick }) => {
         <section id="home">
           <Home />
         </section>
-        <section id="works">
+       
           {/* Works section - to be added later */}
-          <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <h2 className="text-4xl font-bold text-gray-600">Works Section - Coming Soon</h2>
-          </div>
+          <section id="works">
+          <Works />
         </section>
         <section id="uiux">
           <UIUX />

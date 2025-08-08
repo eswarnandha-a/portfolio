@@ -17,14 +17,14 @@ const UIUX = () => {
     {
       lottieSrc: fanwikiLottie,
       title: "Fan Wiki",
-      description: "Designed a fan wiki for Stranger Things with an immersive layout showcasing characters, episodes, and storylines. Focused on dark theme aesthetics and intuitive navigation to enhance the fan experience.",
+      description: "Designed a fan wiki for Stranger Things with an immersive layout showcasing characters, episodes, and storylines. Focused on dark theme aesthetics.",
       lottieSize: "w-64 h-64", // Consistent size for all cards
       figmaLink: "https://www.figma.com/proto/WejKvcQlX9ap72ucHIuAuN/MU-JAIPUR?node-id=16-24&p=f&t=cXmPKpKSSADkuUoI-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=16%3A24",
     },
     {
       lottieSrc: alumnihubLottie,
       title: "Alumni Hub",
-      description: "Designed the UI for a website connecting school alumni, fostering networking. Supports long-term alumni relations with the school. A Project for School in Salem.",
+      description: "Designed the UI for a website connecting school alumni, fostering networking. Supports long-term alumni relations with the school.",
       lottieSize: "w-64 h-64", // Consistent size for all cards - changed from w-48 h-48
       figmaLink: "https://www.figma.com/proto/4qPv3x4fpRMBEG3u1kkk7s/AlumniHUB?t=8I9BwmxOpwmxNwQ0-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&node-id=734-722&starting-point-node-id=734%3A722",
     },
@@ -60,7 +60,7 @@ const UIUX = () => {
               />
               {/* Description with increased margin */}
               <div className="mt-12 text-center max-w-xs">
-                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                <p className="text-base text-gray-600 leading-relaxed mb-24" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   {card.description}
                 </p>
                 {/* Figma Button below description with text */}
@@ -74,7 +74,7 @@ const UIUX = () => {
                       alt="Figma"
                     />
                   </button>
-                  <span className="figma-text">View Prototype</span>
+                  <span className="figma-text" style={{ fontSize: '18px' }}>View Prototype</span>
                 </div>
               </div>
             </div>

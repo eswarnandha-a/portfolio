@@ -117,6 +117,11 @@ const Videos = () => {
 
   return (
     <div className="videos-section">
+      <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-800 mb-4">
+            Videos
+          </h2>
+        </div>
       <div className="videos-four-grid">
         {videos.map(video => renderVideoItem(video, 'video-item'))}
       </div>

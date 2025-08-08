@@ -7,6 +7,7 @@ import TechShowcase from './components/TechShowcase'
 import MagicBento from './components/MagicBento'
 import ExperienceGlass from './components/ExperienceGlass'
 import DesignMode from './components/desmode/DesignMode'
+
 import eswarImage from './assets/eswar.jpg'
 import conredImage from './assets/conred.png'
 import './components/glassmorphism.css'

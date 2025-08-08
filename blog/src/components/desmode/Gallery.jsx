@@ -4,7 +4,13 @@ import svg2 from '../../assets/desmode/svg2.svg';
 
 const Gallery = () => {
   return (
+    
     <div className="gallery-section">
+      <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-800 mb-4">
+            Gallery
+          </h2>
+        </div>
       <div className="gallery-grid-svgs">
         <div className="gallery-svg-item">
           <img src={svg1} alt="Animated Graphic Design 1" />

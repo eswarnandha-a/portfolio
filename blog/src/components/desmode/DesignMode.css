@@ -635,7 +635,7 @@ section {
 .gallery-grid-svgs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 15px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -761,7 +761,7 @@ section {
 .videos-four-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 15px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
