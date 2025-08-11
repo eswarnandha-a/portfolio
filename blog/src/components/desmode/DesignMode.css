@@ -260,7 +260,7 @@ section {
   border-radius: 0;
   padding: 12px 32px;
   font-family: 'Alta Regular', sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   color: #000000;
   cursor: pointer;
@@ -295,7 +295,7 @@ section {
   padding: 12px 24px;
   color: #ffffff;
   font-family: 'Alta Regular', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;

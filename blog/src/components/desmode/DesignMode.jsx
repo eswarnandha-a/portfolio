@@ -5,6 +5,7 @@ import UIUX from './UIUX';
 import Gallery from './Gallery';
 import Videos from './Videos';
 import Works from './Works';
+import DesignFooter from './DesignFooter';
 import './DesignMode.css';
 
 const DesignMode = ({ onDevModeClick }) => {
@@ -70,6 +71,7 @@ const DesignMode = ({ onDevModeClick }) => {
           <Videos />
         </section>
       </main>
+      <DesignFooter />
     </div>
   );
 };

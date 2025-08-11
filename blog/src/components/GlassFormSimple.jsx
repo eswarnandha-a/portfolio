@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-const GlassForm = () => {
+// Simplified version without auto-reply - use this if the main version keeps failing
+const GlassFormSimple = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,19 +24,17 @@ const GlassForm = () => {
     setIsSubmitting(true);
     setSubmitStatus('');
 
-    // Prepare template parameters with additional context
+    // Prepare template parameters
     const templateParams = {
       from_name: formData.name.trim(),
       from_email: formData.email.trim(),
       message: formData.message.trim(),
-      // Additional helpful info
-      timestamp: new Date().toLocaleString(),
-      user_agent: navigator.userAgent.substring(0, 100) // First 100 chars for context
+      timestamp: new Date().toLocaleString()
     };
 
-    console.log('Sending email with params:', templateParams); // Debug log
+    console.log('Sending email with params:', templateParams);
 
-    // 1️⃣ Send message to you
+    // Send only the main email (no auto-reply)
     emailjs.send(
       'service_mqx6mdd',   // Your EmailJS service ID
       'template_l8qc4gk',  // Template ID for receiving message
@@ -43,32 +42,12 @@ const GlassForm = () => {
       'xovb8DpxDw8-pEpBA'  // Your public key
     )
     .then((response) => {
-      console.log('✅ Main email sent successfully:', response);
-      
-      // 2️⃣ Send auto-reply to visitor (optional - don't fail if this fails)
-      return emailjs.send(
-        'service_mqx6mdd',   // Same service ID
-        'template_qxzxnu7', // Template ID for auto-reply
-        {
-          to_name: formData.name.trim(),
-          to_email: formData.email.trim(),
-          reply_message: `Hello ${formData.name},\n\nThank you for visiting my portfolio and reaching out! I truly appreciate all kinds of feedback — whether it’s positive or constructive. Feel free to ask me anything or share your honest thoughts, and I’ll get back to you as soon as possible.\n\nBest regards,\nEswar Anand`
-        },
-        'xovb8DpxDw8-pEpBA'
-      )
-      .catch((autoReplyError) => {
-        // Don't fail the whole process if auto-reply fails
-        console.warn('⚠️ Auto-reply failed (but main email was sent):', autoReplyError);
-        return Promise.resolve(); // Continue with success
-      });
-    })
-    .then(() => {
-      console.log('✅ Email process completed successfully');
+      console.log('✅ Email sent successfully:', response);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     })
     .catch((error) => {
-      console.error('❌ Main email failed:', error);
+      console.error('❌ Email failed:', error);
       console.error('Error details:', {
         message: error.message,
         status: error.status,
@@ -85,7 +64,7 @@ const GlassForm = () => {
   return (
     <div className="glass-form-container">
       <form className="glass-form" onSubmit={handleSubmit}>
-        <h2>Contact Me</h2>
+        <h2>Contact Me (Simple Version)</h2>
         
         {submitStatus === 'success' && (
           <div className="form-message success">
@@ -156,4 +135,4 @@ const GlassForm = () => {
   );
 };
 
-export default GlassForm;
+export default GlassFormSimple;

@@ -15,28 +15,28 @@ const Works = () => {
   const freelanceItems = [
     {
       id: 1,
-      title: "Program Professor YouTube Channel",
-      description: "Created educational content for Program Professor YouTube channel, producing JAVA programming tutorials."
+      title: "Program Professor",
+      description: "Created educational content for Program Professor YouTube channel, producing JAVA programming tutorials and educational materials."
     },
     {
       id: 2,
-      title: "Logo & Brand Design",
-      description: "Designed unique logos for start-ups and college clubs, delivering brand-focused visual identities."
+      title: "Logo and Brand Design",
+      description: "Designed unique logos and brand identities for start-ups and college clubs, delivering comprehensive visual identity solutions."
     },
     {
       id: 3,
-      title: "SOULFUL AI - UI/UX & Branding",
-      description: "Worked as UI/UX Developer and Branding Lead for SOULFUL AI, a student-led emerging start-up."
+      title: "Soulful AI",
+      description: "Worked as UI/UX Developer and Branding Lead for SOULFUL AI, a student-led emerging start-up focused on AI solutions."
     },
     {
       id: 4,
-      title: "EDC Media Manager",
-      description: "Served as Media Manager for the EDC at Sri Eshwar College, managing event coverage and promotions."
+      title: "Entrepreneurship Development Cell",
+      description: "Served as Media Manager for the EDC at Sri Eshwar College, managing event coverage, promotions, and digital content creation."
     },
     {
       id: 5,
-      title: "Creative Design Services",
-      description: "Designed posters, banners, and digital creatives for Ariyatra Tours & Travels and college events."
+      title: "Ariyatra Tours and Travels",
+      description: "Designed comprehensive marketing materials including posters, banners, and digital creatives for Ariyatra Tours & Travels."
     }
   ];
 
@@ -100,11 +100,11 @@ const Works = () => {
       height: isMobile 
         ? isHovered 
           ? 'auto' 
-          : '80px'
+          : '100px'
         : isHovered 
           ? '280px' 
           : '200px',
-      minHeight: isMobile ? '80px' : '200px',
+      minHeight: isMobile ? '100px' : '200px',
       backgroundColor: isHovered ? '#000000' : '#ffffff',
       color: isHovered ? '#ffffff' : '#000000',
       border: `1px solid ${isHovered ? '#ffffff' : '#000000'}`,
@@ -139,14 +139,19 @@ const Works = () => {
         ? '1.1rem' 
         : isHovered 
           ? '1.8rem' 
-          : '1.2rem',
+          : '1.3rem',
       marginBottom: isMobile ? '0.5rem' : isHovered ? '1.2rem' : '0.8rem',
       fontWeight: 'normal',
       fontFamily: "'Alta-Regular', 'Alta', sans-serif",
-      letterSpacing: '2px',
-      lineHeight: '1.2',
+      letterSpacing: '1.5px',
+      lineHeight: '1.3',
       transition: 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
       textTransform: 'uppercase',
+      textAlign: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: isMobile ? 'auto' : isHovered ? 'auto' : '100%',
     }),
     cardDescription: (isHovered) => ({
       fontSize: isMobile 

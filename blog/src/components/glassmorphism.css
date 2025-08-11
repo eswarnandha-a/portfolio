@@ -510,6 +510,8 @@ section#experience + section#projects {
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
+  /* Move content upward on desktop */
+  margin-top: -80px;
 }
 
 .hero-content {
@@ -584,7 +586,7 @@ section#experience + section#projects {
 
 .glass-form {
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px) saturate(150%);
   -webkit-backdrop-filter: blur(8px) saturate(150%);
@@ -596,7 +598,7 @@ section#experience + section#projects {
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
-  padding: 30px;
+  padding: 35px;
   z-index: 20;
   transition: all 0.3s ease;
 }
@@ -1027,6 +1029,22 @@ section#experience + section#projects {
   .mobile-menu-backdrop {
     display: none !important;
   }
+  
+  /* Keep navbar fixed on desktop */
+  .navbar-wrapper {
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    width: calc(100% - 40px) !important;
+    max-width: 1200px !important;
+  }
+  
+  /* Keep desktop main content padding */
+  .main-content {
+    padding: 120px 20px 0px !important;
+  }
 }
 
 /* Footer - Now integrated within contact section */
@@ -1119,6 +1137,7 @@ section#experience + section#projects {
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  text-decoration: none; /* Remove link underline */
 }
 
 .social-icon::before {
@@ -1155,6 +1174,16 @@ section#experience + section#projects {
 
 .social-icon:hover img {
   filter: brightness(1.2) contrast(1.3);
+}
+
+/* Social Icon Link Accessibility */
+.social-icon:focus {
+  outline: 2px solid rgba(255, 68, 68, 0.8);
+  outline-offset: 2px;
+}
+
+.social-icon:active {
+  transform: translateY(-1px) scale(1.05);
 }
 
 /* Resume Button */
@@ -1437,14 +1466,17 @@ section#experience + section#projects {
   /* MOBILE NAVBAR LAYOUT */
   .navbar-wrapper {
     display: block !important;
-    position: fixed !important;
-    top: 20px !important;
-    left: 20px !important;
-    right: 20px !important;
-    transform: none !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
     z-index: 1000 !important;
     width: calc(100% - 40px) !important;
+    max-width: 400px !important;
     height: auto !important;
+    margin: 20px 0 0 0 !important;
+    padding: 0 !important;
   }
   
   .glass-navbar {
@@ -1672,7 +1704,7 @@ section#experience + section#projects {
   }
   
   .main-content {
-    padding: 140px 15px 0px 15px;
+    padding: 20px 15px 0px 15px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -1721,6 +1753,8 @@ section#experience + section#projects {
     max-width: 100%;
     padding: 0;
     margin: 0;
+    /* Reset the upward margin on mobile */
+    margin-top: 0;
   }
   
   .hero-text {

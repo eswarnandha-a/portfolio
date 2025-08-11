@@ -112,21 +112,25 @@ function App() {
                     
                     {/* Social Media Icons (4 logos) */}
                     <div className="social-icons">
-                      <div className="social-icon">
-                        <img src="/src/assets/social/31.png" alt="Social Icon 1" />
-                      </div>
-                      <div className="social-icon">
-                        <img src="/src/assets/social/32.png" alt="Social Icon 2" />
-                      </div>
-                      <div className="social-icon">
-                        <img src="/src/assets/social/33.png" alt="Social Icon 3" />
-                      </div>
-                      <div className="social-icon">
-                        <img src="/src/assets/social/34.png" alt="Social Icon 4" />
-                      </div>
+                      {/* LinkedIn */}
+                      <a href="https://in.linkedin.com/in/eswar-anand13" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <img src="/src/assets/social/31.png" alt="LinkedIn" />
+                      </a>
+                      
+                      {/* GitHub */}
+                      <a href="https://github.com/eswarnandha-a" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <img src="/src/assets/social/32.png" alt="GitHub" />
+                      </a>
+                      
+                      {/* Instagram */}
+                      <a href="https://www.instagram.com/eswaranand_/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <img src="/src/assets/social/33.png" alt="Instagram" />
+                      </a>
+                      
+
                       
                       {/* Resume Button */}
-                      <a href="/path-to-your-resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-btn">
+                      <a href="https://drive.google.com/drive/folders/1fRZithJMrjCdi0fbbvswZq7F1YGwzb_O?usp=drive_link" target="_blank" rel="noopener noreferrer" className="resume-btn">
                         Resume
                       </a>
                     </div>
